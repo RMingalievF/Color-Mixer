@@ -37,13 +37,16 @@ class ViewController: UIViewController {
 
     
     @IBAction func redSliderActoin() {
+        valueRedLabel.text = String(format: "%.1f", redSlider.value)
     }
     
     @IBAction func greenSliderAction() {
+        valueGreenLabel.text = String(format: "%.1f", greenSlider.value)
     }
     
     
     @IBAction func blueSlinerAction() {
+        valueBlueLabel.text = String(format: "%.1f", blueSlider.value)
     }
     
 
