@@ -35,21 +35,15 @@ class ViewController: UIViewController {
         
     }
 
-    
-    @IBAction func redSliderActoin() {
+    func changeCollor() {
+        mixerColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+    }
+    @IBAction func rgbSliderAction() {
+        changeCollor()
         valueRedLabel.text = String(format: "%.1f", redSlider.value)
-    }
-    
-    @IBAction func greenSliderAction() {
         valueGreenLabel.text = String(format: "%.1f", greenSlider.value)
-    }
+        valueBlueLabel.text = String(format: "%.1f", blueSlider.value)    }
     
-    
-    @IBAction func blueSlinerAction() {
-        valueBlueLabel.text = String(format: "%.1f", blueSlider.value)
-    }
-    
-
     
 // MARK: Private metods
     private func setupLabelsConfiguration() {
