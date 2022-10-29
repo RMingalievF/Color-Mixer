@@ -35,11 +35,11 @@ class ViewController: UIViewController {
         
     }
 
-    func changeCollor() {
+    func changeColor() {
         mixerColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     @IBAction func rgbSliderAction() {
-        changeCollor()
+        changeColor()
         valueRedLabel.text = String(format: "%.1f", redSlider.value)
         valueGreenLabel.text = String(format: "%.1f", greenSlider.value)
         valueBlueLabel.text = String(format: "%.1f", blueSlider.value)    }
