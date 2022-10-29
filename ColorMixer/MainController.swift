@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class ViewController: UIViewController {
     
     @IBOutlet weak var mixerColorView: UIView!
     
@@ -27,14 +27,71 @@ class MainController: UIViewController {
     
     
     override func viewDidLoad() {
+        setupMixerColorView()
+        setupLabelsConfiguration()
+        setupSliders()
+        
         super.viewDidLoad()
         
     }
 
+    
+    @IBAction func redSliderActoin() {
+    }
+    
+    @IBAction func greenSliderAction() {
+    }
+    
+    
+    @IBAction func blueSlinerAction() {
+    }
+    
 
     
+// MARK: Private metods
+    private func setupLabelsConfiguration() {
+        redLabel.textColor = .red
+        redLabel.text = "Red"
+        valueRedLabel.text = redSlider.value.formatted()
+        valueRedLabel.textColor = .red
+        
+        
+        greenLabel.textColor = .green
+        greenLabel.text = "Green"
+        valueGreenLabel.text = greenSlider.value.formatted()
+        valueGreenLabel.textColor = .green
+        
+        
+        blueLabel.textColor = .blue
+        blueLabel.text = "Blue"
+        valueBlueLabel.text = blueSlider.value.formatted()
+        valueBlueLabel.textColor = .blue
+        
+    }
     
+    private func setupSliders() {
+        redSlider.minimumValue = 0
+        redSlider.maximumValue = 1
+        redSlider.minimumTrackTintColor = .red
+        redSlider.thumbTintColor = .red
+        
+        
+        greenSlider.minimumValue = 0
+        greenSlider.maximumValue = 1
+        greenSlider.minimumTrackTintColor = .green
+        greenSlider.thumbTintColor = .green
+        
+        
+        blueSlider.minimumValue = 0
+        blueSlider.maximumValue = 1
+        blueSlider.minimumTrackTintColor = .blue
+        blueSlider.thumbTintColor = .blue
+    }
     
-    
+    private func setupMixerColorView() {
+        mixerColorView.backgroundColor = .gray
+        mixerColorView.layer.cornerRadius = 5
+        
+    }
 }
 

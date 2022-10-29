@@ -84,12 +84,21 @@
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k8g-YL-IXG" userLabel="Red Slider">
                                                         <rect key="frame" x="-2" y="0.0" width="299.33333333333331" height="31"/>
+                                                        <connections>
+                                                            <action selector="redSliderActoin" destination="BYZ-38-t0r" eventType="valueChanged" id="kcP-aj-62c"/>
+                                                        </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pG7-nJ-682" userLabel="Green Slider">
                                                         <rect key="frame" x="-2" y="38" width="299.33333333333331" height="31"/>
+                                                        <connections>
+                                                            <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="dSh-B8-Rdj"/>
+                                                        </connections>
                                                     </slider>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qht-sK-wqw" userLabel="Blue Slider">
                                                         <rect key="frame" x="-2" y="76" width="299.33333333333331" height="31"/>
+                                                        <connections>
+                                                            <action selector="blueSlinerAction" destination="BYZ-38-t0r" eventType="valueChanged" id="tJ9-JH-Fil"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                             </stackView>
