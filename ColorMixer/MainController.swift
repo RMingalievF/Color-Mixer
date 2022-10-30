@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
     
-   
     @IBOutlet weak var valueRedLabel: UILabel!
     @IBOutlet weak var valueGreenLabel: UILabel!
     @IBOutlet weak var valueBlueLabel: UILabel!
@@ -27,9 +26,10 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        setupSliders()
         setupMixerColorView()
         setupLabelsConfiguration()
-        setupSliders()
+        
         
         super.viewDidLoad()
         
@@ -52,12 +52,10 @@ class ViewController: UIViewController {
         valueRedLabel.text = redSlider.value.formatted()
         valueRedLabel.textColor = .red
         
-        
         greenLabel.textColor = .green
         greenLabel.text = "Green"
         valueGreenLabel.text = greenSlider.value.formatted()
         valueGreenLabel.textColor = .green
-        
         
         blueLabel.textColor = .blue
         blueLabel.text = "Blue"
@@ -67,18 +65,19 @@ class ViewController: UIViewController {
     }
     
     private func setupSliders() {
+        redSlider.value = 0
         redSlider.minimumValue = 0
         redSlider.maximumValue = 1
         redSlider.minimumTrackTintColor = .red
         redSlider.thumbTintColor = .red
         
-        
+        greenSlider.value = 0
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 1
         greenSlider.minimumTrackTintColor = .green
         greenSlider.thumbTintColor = .green
         
-        
+        blueSlider.value = 0
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 1
         blueSlider.minimumTrackTintColor = .blue
@@ -87,7 +86,7 @@ class ViewController: UIViewController {
     
     private func setupMixerColorView() {
         mixerColorView.backgroundColor = .gray
-        mixerColorView.layer.cornerRadius = 5
+        mixerColorView.layer.cornerRadius = 10
         
     }
 }
