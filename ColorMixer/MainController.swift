@@ -40,9 +40,9 @@ class ViewController: UIViewController {
     }
     @IBAction func rgbSliderAction() {
         changeColor()
-        valueRedLabel.text = String(format: "%.1f", redSlider.value)
-        valueGreenLabel.text = String(format: "%.1f", greenSlider.value)
-        valueBlueLabel.text = String(format: "%.1f", blueSlider.value)    }
+        valueRedLabel.text = String(format: "%.2f", redSlider.value)
+        valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
+        valueBlueLabel.text = String(format: "%.2f", blueSlider.value)    }
     
     
 // MARK: Private metods
