@@ -13,6 +13,7 @@
 		82410368290D6BB7006C3DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82410366290D6BB7006C3DF6 /* Main.storyboard */; };
 		8241036A290D6BB8006C3DF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82410369290D6BB8006C3DF6 /* Assets.xcassets */; };
 		8241036D290D6BB8006C3DF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8241036B290D6BB8006C3DF6 /* LaunchScreen.storyboard */; };
+		82A4CD002925650C0085B77A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A4CCFF2925650C0085B77A /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		82410369290D6BB8006C3DF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8241036C290D6BB8006C3DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8241036E290D6BB8006C3DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82A4CCFF2925650C0085B77A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				82410362290D6BB7006C3DF6 /* SceneDelegate.swift */,
 				82410364290D6BB7006C3DF6 /* MainController.swift */,
 				82410366290D6BB7006C3DF6 /* Main.storyboard */,
+				82A4CCFF2925650C0085B77A /* StartViewController.swift */,
 				82410369290D6BB8006C3DF6 /* Assets.xcassets */,
 				8241036B290D6BB8006C3DF6 /* LaunchScreen.storyboard */,
 				8241036E290D6BB8006C3DF6 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82410365290D6BB7006C3DF6 /* MainController.swift in Sources */,
+				82A4CD002925650C0085B77A /* StartViewController.swift in Sources */,
 				82410361290D6BB7006C3DF6 /* AppDelegate.swift in Sources */,
 				82410363290D6BB7006C3DF6 /* SceneDelegate.swift in Sources */,
 			);
