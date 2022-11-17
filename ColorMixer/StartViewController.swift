@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MainViewControllerDelrgate {
+    func changeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat )
+}
+
 class StartViewController: UIViewController {
 
     
@@ -26,4 +30,11 @@ class StartViewController: UIViewController {
     }
 }
 
+extension StartViewController: MainViewControllerDelrgate {
+    func changeColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        view.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+     
+}
 
