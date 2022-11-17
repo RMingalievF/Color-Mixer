@@ -28,10 +28,11 @@ class MainViewController: UIViewController {
     var colorView: UIColor!
     
     override func viewDidLoad() {
-        setupSliders()
+        
         setupLabelsConfiguration()
         mixerColorView.layer.cornerRadius = 10
         mixerColorView.backgroundColor = colorView
+        setupSliders()
         super.viewDidLoad()
         
     }
@@ -70,24 +71,36 @@ class MainViewController: UIViewController {
     }
     
     private func setupSliders() {
-        redSlider.value = 0
+        redSlider.value = Float((mixerColorView.backgroundColor?.components.red)!)
         redSlider.minimumValue = 0
         redSlider.maximumValue = 1
         redSlider.minimumTrackTintColor = .red
         redSlider.thumbTintColor = .red
         
-        greenSlider.value = 0
+        greenSlider.value = Float((mixerColorView.backgroundColor?.components.green)!)
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 1
         greenSlider.minimumTrackTintColor = .green
         greenSlider.thumbTintColor = .green
         
-        blueSlider.value = 0
+        blueSlider.value = Float((mixerColorView.backgroundColor?.components.blue)!)
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 1
         blueSlider.minimumTrackTintColor = .blue
         blueSlider.thumbTintColor = .blue
     }
     
+    
+    
+
 }
 
+extension UIColor {
+    var coreViewColor: CIColor {
+        return CIColor(color: self)
+    }
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        let coreViewColor = self.coreViewColor
+        return (coreViewColor.red, coreViewColor.green, coreViewColor.blue, coreViewColor.alpha)
+    }
+}
