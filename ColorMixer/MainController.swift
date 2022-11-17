@@ -30,7 +30,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         setupSliders()
         setupLabelsConfiguration()
-        
+        mixerColorView.layer.cornerRadius = 10
+        mixerColorView.backgroundColor = colorView
         super.viewDidLoad()
         
     }
@@ -88,10 +89,5 @@ class MainViewController: UIViewController {
         blueSlider.thumbTintColor = .blue
     }
     
-    private func setupMixerColorView() {
-        mixerColorView.backgroundColor = .gray
-        mixerColorView.layer.cornerRadius = 10
-        
-    }
 }
 
