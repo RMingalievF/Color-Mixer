@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
+    
+      
     
     @IBOutlet weak var mixerColorView: UIView!
     
@@ -23,27 +25,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
-    
+    var colorView: UIColor!
     
     override func viewDidLoad() {
         setupSliders()
-        setupMixerColorView()
         setupLabelsConfiguration()
-        
         
         super.viewDidLoad()
         
     }
 
-    func changeColor() {
-        mixerColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
-    }
+
     @IBAction func rgbSliderAction() {
         changeColor()
         valueRedLabel.text = String(format: "%.2f", redSlider.value)
         valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
-        valueBlueLabel.text = String(format: "%.2f", blueSlider.value)    }
+        valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
+    }
     
+    
+    
+    func changeColor() {
+        mixerColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+    }
     
 // MARK: Private metods
     private func setupLabelsConfiguration() {

@@ -12,7 +12,7 @@
         <!--Start View Controller-->
         <scene sceneID="jqq-Tl-BvH">
             <objects>
-                <viewController id="aKr-e6-6M8" userLabel="Start View Controller" sceneMemberID="viewController">
+                <viewController id="aKr-e6-6M8" userLabel="Start View Controller" customClass="StartViewController" customModule="ColorMixer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="STM-Yv-qKI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,10 +23,14 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="light.beacon.min.fill" catalog="system" symbolScale="large"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressButton:" destination="aKr-e6-6M8" eventType="touchUpInside" id="VhA-xC-Rjy"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="2iW-Mq-Tm3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HEd-yN-MiA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="xAD-nh-9jk" firstAttribute="top" secondItem="HEd-yN-MiA" secondAttribute="top" constant="16" id="LAF-T6-LKI"/>
                             <constraint firstItem="xAD-nh-9jk" firstAttribute="leading" secondItem="HEd-yN-MiA" secondAttribute="leading" constant="314" id="iuA-Rm-exR"/>
@@ -41,9 +45,9 @@
         <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Main Controller" customClass="ViewController" customModule="ColorMixer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Main Controller" customClass="MainViewController" customModule="ColorMixer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="tNu-Q3-dMj">
@@ -157,6 +161,7 @@
                             <constraint firstItem="tNu-Q3-dMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NkO-70-lYc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WDy-IN-Mdf"/>
                     <connections>
                         <outlet property="blueLabel" destination="plv-rg-qHN" id="5FY-VC-q76"/>
                         <outlet property="blueSlider" destination="Qht-sK-wqw" id="SlM-ii-t87"/>
@@ -179,6 +184,9 @@
         <image name="light.beacon.min.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
