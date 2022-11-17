@@ -26,6 +26,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var blueSlider: UISlider!
     
     var colorView: UIColor!
+    var delegate: MainViewControllerDelrgate!
+    
+    
     
     override func viewDidLoad() {
         setupLabelsConfiguration()
@@ -46,7 +49,7 @@ class MainViewController: UIViewController {
     
     @IBAction func pressButtonDone() {
         dismiss(animated: true)
-        
+        delegate?.changeColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value) , alpha: 1)
         
     }
     

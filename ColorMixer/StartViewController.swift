@@ -22,6 +22,7 @@ class StartViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let startVC = segue.destination as? MainViewController else { return }
         startVC.colorView = view.backgroundColor
+        startVC.delegate = self
     }
 
 
