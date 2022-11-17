@@ -28,7 +28,6 @@ class MainViewController: UIViewController {
     var colorView: UIColor!
     
     override func viewDidLoad() {
-        
         setupLabelsConfiguration()
         mixerColorView.layer.cornerRadius = 10
         mixerColorView.backgroundColor = colorView
@@ -45,10 +44,19 @@ class MainViewController: UIViewController {
         valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
     }
     
+    @IBAction func pressButtonDone() {
+        dismiss(animated: true)
+        
+        
+    }
     
     
     func changeColor() {
-        mixerColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        mixerColorView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1)
     }
     
 // MARK: Private metods

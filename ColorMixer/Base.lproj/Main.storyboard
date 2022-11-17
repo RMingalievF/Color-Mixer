@@ -152,6 +152,15 @@
                                     <constraint firstAttribute="trailing" secondItem="S6S-1a-nU8" secondAttribute="trailing" id="nhT-It-X6T"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orS-yk-0R8">
+                                <rect key="frame" x="162.33333333333334" y="589" width="65.333333333333343" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="DONE"/>
+                                <connections>
+                                    <action selector="pressButtonDone" destination="BYZ-38-t0r" eventType="touchUpInside" id="srI-3V-uJG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,6 +168,9 @@
                             <constraint firstAttribute="trailing" secondItem="tNu-Q3-dMj" secondAttribute="trailing" constant="10" id="GFz-qv-4hZ"/>
                             <constraint firstItem="tNu-Q3-dMj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="JcL-yE-fdc"/>
                             <constraint firstItem="tNu-Q3-dMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="NkO-70-lYc"/>
+                            <constraint firstItem="orS-yk-0R8" firstAttribute="top" secondItem="19h-dV-ZuQ" secondAttribute="bottom" constant="160" id="ebo-Oc-jeN"/>
+                            <constraint firstItem="orS-yk-0R8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hbG-Wn-SQR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="orS-yk-0R8" secondAttribute="trailing" constant="162.33000000000001" id="uwD-iH-vck"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WDy-IN-Mdf"/>
