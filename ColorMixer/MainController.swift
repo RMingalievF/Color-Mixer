@@ -31,20 +31,19 @@ class MainViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         setupLabelsConfiguration()
         mixerColorView.layer.cornerRadius = 10
         mixerColorView.backgroundColor = colorView
         setupSliders()
-        super.viewDidLoad()
+        setValue(for: redLabel, greenLabel, blueLabel)
         
     }
 
 
     @IBAction func rgbSliderAction() {
         changeColor()
-        valueRedLabel.text = String(format: "%.2f", redSlider.value)
-        valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
-        valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
+        setValue(for: redLabel, greenLabel, blueLabel)
     }
     
     @IBAction func pressButtonDone() {
@@ -53,16 +52,29 @@ class MainViewController: UIViewController {
         
     }
     
-    
-    func changeColor() {
+    // MARK: Private metods
+    private func changeColor() {
         mixerColorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
-            alpha: 1)
+            alpha: 1
+        )
     }
     
-// MARK: Private metods
+    private func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case redLabel:
+                valueRedLabel.text = String(format: "%.2f", redSlider.value)
+            case greenLabel:
+                valueGreenLabel.text = String(format: "%.2f", greenSlider.value)
+            default:
+                valueBlueLabel.text = String(format: "%.2f", blueSlider.value)
+            }
+        }
+    }
+
     private func setupLabelsConfiguration() {
         redLabel.textColor = .red
         redLabel.text = "Red"
